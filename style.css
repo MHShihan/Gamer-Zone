@@ -1,5 +1,6 @@
 /* Common Sheared Style  */
-* {
+*,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -22,6 +23,12 @@
 }
 
 /* Header Style  */
+
+header {
+  max-width: 2100px;
+  display: block;
+  margin: auto;
+}
 
 .navbar {
   display: flex;
@@ -184,25 +191,60 @@
 .funny-videos img {
   width: 100%;
 }
-/* .funny-videos img:hover {
-  border: 5px solid #ff42a5;
-  border-radius: 16px;
-  background-image: url("images/play-button.png");
-  position: fixed;
-  display: none;
-  width: 100%;
-  height: 100%;
+
+/*-------------------- Overlay Style----------------------------------  */
+
+.box-content-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ff42a5;
+}
+
+.box-content i {
+  display: block;
+  margin: auto;
+  text-align: center;
+  font-size: 4rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.box {
+  position: relative;
+}
+.box-content {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  z-index: 2;
+  transition: all 0.4s ease-in-out;
+}
+.box:hover .box-content {
+  opacity: 1;
+  top: 50%;
+}
+
+.box::after {
+  content: "";
+  display: block;
+  position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  opacity: 0.5;
-  z-index: 2;
-  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 0, 0, 0.8);
+  opacity: 0;
+  z-index: 1;
+  border: 0;
+  transition: all 0.2 ease-in;
 }
-#funny-image {
-} */
+.box:hover::after {
+  opacity: 1;
+  border: 5px solid #ff42a5;
+  border-radius: 10px;
+}
 
 /* Play Instantly Style  */
 
@@ -614,6 +656,19 @@
   }
 }
 @media screen and (min-width: 1900px) and (max-width: 2600px) {
+  header {
+    max-width: 100%;
+    display: block;
+    margin: auto;
+  }
+
+  .navbar {
+    padding: 30px 260px 30px 350px;
+  }
+
+  .banner {
+    gap: 450px;
+  }
   .play-instantly-container {
     gap: 200px;
   }
