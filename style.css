@@ -16,13 +16,16 @@
   font-weight: 700;
   color: #0b0223;
 }
+.center {
+  text-align: center;
+}
 
 /* Header Style  */
 
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 30px 240px;
+  padding: 30px 180px;
 }
 .navbar > ul {
   display: flex;
@@ -50,12 +53,8 @@
 }
 .nav-button p {
   color: #3c354f;
-  text-align: center;
-  font-family: Work Sans;
   font-size: 18px;
-  font-style: normal;
   font-weight: 500;
-  line-height: normal;
 }
 .nav-button i {
   font-size: 1.25rem;
@@ -64,6 +63,128 @@
 .letter-g {
   color: #ff42a5;
 }
+
+/* Banner Style  */
+
+.banner {
+  background: url("images/Group\ 14.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  display: flex;
+  gap: 50px;
+  justify-content: space-around;
+}
+
+.banner-column-1 {
+  padding: 80px 0 60px 180px;
+}
+
+.play-like-text {
+  color: #0b0223;
+  font-family: Work Sans;
+  font-size: 3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.goat {
+  font-size: 5.9rem;
+  font-weight: 800;
+  background: linear-gradient(180deg, #f948b2 0%, #8758f1 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.goat-text {
+  display: inline-block;
+  color: #534c64;
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin: 18px;
+}
+
+.banner-column-1 {
+  display: inline-flex;
+  flex-direction: column;
+}
+.banner-column-2 img {
+  width: 100%;
+}
+
+.btn-container {
+  display: inline-flex;
+  gap: 20px;
+}
+.sign-in-btn {
+  background: #ff42a5;
+  border: 0;
+  border-radius: 48px;
+  padding: 21px 40px;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.go-rouge-btn {
+  background: #4ec5f7;
+  border: 0;
+  border-radius: 48px;
+  padding: 21px 40px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* ------------ Online Games Funny Videos Style ---------------- */
+
+.online-games {
+  display: block;
+  margin: 0 auto;
+}
+.online-games-title {
+  color: #0b0223;
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 80px 0 30px 0;
+}
+
+.online-games-title span {
+  background: linear-gradient(180deg, #f948b2 0%, #8758f1 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.funny-videos-container {
+  margin: 50px 200px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.funny-videos {
+  display: flex;
+  flex-direction: column;
+}
+.funny-videos p {
+  color: #534c64;
+  font-size: 1.25rem;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+.funny-videos-container .funny-videos img {
+  width: 100%;
+}
+
+/* ------------------------------------------------------------------------- */
 
 /* Responsive Style  */
 
@@ -82,6 +203,41 @@
   .navbar {
     padding: 20px;
   }
+
+  .banner {
+    flex-direction: column-reverse;
+    padding: 0;
+  }
+
+  .banner-column-1 {
+    padding: 0 0 0 20px;
+  }
+
+  .sign-in-btn,
+  .go-rouge-btn {
+    background: #ff42a5;
+    border: 0;
+    border-radius: 48px;
+    padding: 15px 20px;
+    font-size: 1rem;
+  }
+
+  .goat {
+    font-size: 4.5rem;
+  }
+  .play-like-text {
+    font-size: 2.2rem;
+  }
+
+  .banner-column-2 img {
+    width: 80%;
+    margin: 0 20px;
+  }
+  .funny-videos-container {
+    grid-template-columns: repeat(1, 1fr);
+    margin: 10px;
+    padding: 20px;
+  }
 }
 
 /* Medium Device Style  */
@@ -90,14 +246,58 @@
   .navbar > ul {
     flex-direction: column;
     justify-content: center;
+    justify-content: center;
   }
   .navbar > ul {
     margin-top: 20px;
+  }
+
+  .nav-icon {
+    justify-content: center;
+  }
+  .banner {
+    flex-direction: column-reverse;
+    padding: 0;
+  }
+
+  .banner-column-1 {
+    display: block;
+    padding: 0 auto;
+  }
+  .banner-column-2 {
+    padding: 20px;
+  }
+  .funny-videos-container {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 10px;
+    padding: 50px;
   }
 }
 
 @media screen and (min-width: 960px) and (max-width: 1100px) {
   .navbar {
     padding: 30px 100px;
+  }
+
+  .banner .banner-column-1 {
+    padding: 20px 20px 20px 50px;
+  }
+
+  .banner-column-2 img {
+    padding: 20px 0 20px 50px;
+    width: 80%;
+  }
+  .sign-in-btn,
+  .go-rouge-btn {
+    background: #ff42a5;
+    border: 0;
+    border-radius: 48px;
+    padding: 15px 20px;
+    font-size: 1rem;
+  }
+  .funny-videos-container {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 10px;
+    padding: 100px;
   }
 }
